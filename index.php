@@ -8,8 +8,8 @@
 </head>
 <body>
     <form action="censor.php" method="post">
-        <input type="text" name="words">
         <input type="text" name="sentence">
+        <input type="text" name="word">
         <button type="submit">Invia</button>
     </form>
 
