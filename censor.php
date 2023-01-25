@@ -2,10 +2,12 @@
     <?php 
    $sentence =  $_POST['sentence'];
    $censored =  $_POST['word'];
+
+   $changed = str_ireplace($censored, '***', $sentence)
     ?>
 
 <h2>
-<?php echo $sentence . ',  ' . $censored  ?>
+<?php echo $sentence ?>
 </h2>
 
 <p>
@@ -13,10 +15,10 @@ Il paragrafo scritto è lungo <strong><?php echo strlen($sentence);?></strong> c
 </p>
 
 <h2>
-<?php echo $sentence . ",  " . str_replace('Jon Snow', '***', $censored)?>
+<?php echo $changed?>
 </h2>
 <p>
-Il paragrafo scritto è lungo <strong><?php echo strlen($sentence);?></strong> caratteri.
+Il paragrafo scritto è lungo <strong><?php echo strlen($changed)?></strong> caratteri.
 </p>
 
 
